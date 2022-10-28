@@ -6,6 +6,7 @@ extern "C" {
 #endif
 
 #include "stm32f4xx_def.h"
+#include "Interrupt.h"
 
 /* define IRQ Channel
 EXTI[0..4]: 	Pin[A,B,..] 	[0..4]
@@ -54,7 +55,7 @@ EXTI[15_10]: 	Pin[A,B,..] 	[10..15]
 
 
 StatusTypeDef EXTI_Init(uint8_t EXTIChannel, uint8_t EXTIline, uint8_t Trigger);
-void Set_Priority_EXTI(uint8_t EXTIChannel, uint8_t EXTIline, uint8_t Priority);
+
 
 	
 #ifdef __cplusplus
